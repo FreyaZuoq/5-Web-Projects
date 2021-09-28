@@ -1,0 +1,72 @@
+:root(--var_)
+xxx (--var)
+
+*
+body
+
+◦ Main Style:
+    1. a
+    2. ul
+    3. h
+    4. img
+
+◦ Utility Style:
+    1. container:
+      normal setting:
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 0 2rem;
+        overflow: hidden;
+
+    2. bg
+      bg-dark
+       bg-primary
+      bg-light
+
+    3. padding
+       (py for padding only top and bottom)
+       (p for padding all way around)
+      py-1
+      py-2
+      ...
+      p-1
+      p-2
+      ...
+
+    4. btn:
+      btn-dark
+      btn-primary
+      btn-secondary
+      btn:hover
+      btn-block { block ---> goes over across}
+
+     5. category
+      category-xxx1 
+      category-xxx2 
+      category-xxx3
+    6. heading:
+      l-heading
+      m-heading
+      ...  
+
+
+◦ Core Style
+    1. navbar
+    2. showcase
+      showcase-container
+      showcase::before
+      showcase-content
+    3. sidebar  
+    4. footer  
+
+
+select
+before 
+after
+
+    
+
+    
+
+
+

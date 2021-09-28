@@ -1,0 +1,88 @@
+:root {
+  --primary-color: rgba(13,110,139,0.75);
+  --secondary-color: rgba(229,148,0,0.9);
+  --overlay-color: rgba(23,39,51,0.85);
+  --menu-speed: 0.75s;
+}
+
+/* reste */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  /* let the menu outside of the container */
+  max-width: 960px;
+  /* in the center */
+  margin:auto ;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+#showcase {
+  background-color: var(--primary-color);
+  color: white;
+  /* take up the whole page */
+  height: 100vh;
+
+  /* because: use the before pesudo to add overlay 
+     and the overlay has to be position absulute
+     and the position absolute is relative to its first ★★★ relative container 
+     (which the course we want to be the showcase)
+
+     If not, it will use the body as its ancester
+     
+     that is to say: the showcase has to be relative since it is the ancester*/
+  position: relative;
+}
+
+/* set a img as bg */
+#showcase:before {
+  content: '';
+  background: url("../forest.jpg") center center/cover no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+}
+
+#showcase p {
+  font-size: 1.3rrem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color:  white;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  background: rgb(13,110,139);
+  border-radius: 5px;
+  transition: opacity 1s ease-in-out ;
+}
+
+.btn:hover {
+  opacity: 0.5;
+}

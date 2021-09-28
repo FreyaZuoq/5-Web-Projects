@@ -1,0 +1,101 @@
+// Tablets & Smaller
+@media(max-width:800px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+
+}
+
+// Smartohones
+@media(max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  #header {
+    &-home {
+      height: 7.5rem;
+      border-bottom: 3px solid $main-color;
+      background-position: 0 0;
+
+      .header-content {
+        display: none;
+      }
+    }
+
+    &-inner {
+      height: 7.5rem;
+    }
+  }
+
+  // Stack Grid Columns
+  #home-A .specials,
+  #home-B .stats,
+  #home-C .process,
+  #about-D .testimonials,
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  #about {
+    &-A {
+      .about-info {
+        grid-template-areas: 
+        'bioimage bioimage bioimage'
+         'bio bio bio'
+        'aw1 aw2 aw3';
+        gap: 1.2rem;
+
+        img {
+          width: 75%;
+          justify-self: center;
+        }
+      }
+    }
+  }
+
+  #contact {
+    &-A {
+      .text-fields {
+        grid-template-areas: 
+        'name' 
+        'email'
+        'subject'
+        'phone'
+        'message';
+      }
+    }
+  }
+
+ // Footer
+#main-footer {
+  height: 3.5rem;
+  background-color: $dark-color;
+  color: white;
+
+  .footer-content {
+    display: flex;
+    // space-between ---- the two items are in each side
+    justify-content: center;
+    height: 3.5rem;
+    align-items: center;
+    padding: 0 1.5rem;
+    margin: auto;
+
+    .social .fab {
+     display: none;
+    }
+  }
+}
+  
+}
+

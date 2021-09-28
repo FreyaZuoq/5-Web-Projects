@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/11638d814b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- original stylesheet should be above -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="./css/widescreen.css">
+
+    <title>Dance & Drink | Just Have Fun</title>
+</head>
+
+<body id="home">
+    <!-- Navbar -->
+    <nav id="navbar">
+        <h1 class="logo">
+            <span class="text-primary">
+                <i class="fas fa-cocktail"></i>  Dance
+            </span>Bar
+        </h1>
+
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#what">What</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header: Showcase -->
+    <header id="showcase">
+        <div class="showcase-content">
+            <h1 class="l-heading">Have Fun With Friends</h1>
+            <p class="lead">Lorem ipsum dolor, sit amet consec
+                tetur adipisicing elit. Excepturi minima reiciendis totam c
+                orrupti aut, explicabo molestias tenetur eaque ab hic.</p>
+            <a href="#what" class="btn">Read More</a>
+            
+        </div>
+    </header>
+
+    <!-- Section -->
+    <section id="what">
+        <!--✨ When we need to use a container?
+            👀 to go all the way over to the edge, acorss the page width -->
+        <div class="container">
+            <h2 class="m-heading text-center py-2"><span class="text-primary">What</span> You Can Do</h2>
+            <!-- the items will use flex -->
+            <div class="items">
+                <div class="item">
+                    <i class="fas fa-wine-bottle fa-2x"></i>
+                    <div>
+                        <h1>Drink many types of wines</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut inventore
+                            accusantium soluta veritatis. Officiis, perspiciatis.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="fas fa-music fa-2x"></i>
+                    <div>
+                        <h2>Extrodinary KTV bar</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facere rerum nihil ab enim maiores in.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="fas fa-gamepad fa-2x"></i>
+                    <div>
+                        <h2>Playing Games </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquam
+                                excepturi sequi, veritatis adipisci odio!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <h1>
+            <span class="text-primary">What</span>
+            You Can Do</h1>
+        <ul>
+            <li>
+                <i class="fas fa-wine-bottle fa-3x"></i>
+                <h3>Drink many types of wines</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut inventore
+                    accusantium soluta veritatis. Officiis, perspiciatis.</p>
+            </li>
+            <li>
+                <i class="fas fa-music fa-3x"></i>
+                <h3>Extrodinary KTV bar</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facere rerum nihil ab enim maiores in.</p>
+            </li>
+            <li>
+                <i class="fas fa-gamepad fa-3x"></i>
+                <h3>Playing Games </h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquam
+                    excepturi sequi, veritatis adipisci odio!</p>
+            </li>
+        </ul> -->
+    </section>
+
+    <!-- Section Why Us -->
+    <section id="why">
+        <!-- No need to use a container, since all items go all the way over to the edge -->
+        <!-- The section itself is gonna to be the flex -->
+        <div class="party-img"></div>
+        <div class="why-content bg-dark p-2">
+            <!-- p means padding all the way around; py means padding y exis -->
+            <h2 class="m-heading"><span class="text-primary">Why</span> Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. S
+                uscipit laboriosam soluta eveniet aliquam debitis unde hic
+                commodi, culpa quae enim adipisci libero
+                accusantium vitae iste dolorem magnam deserunt nemo. Magnam!
+            </p>
+            <h3>Also</h3>
+            <ul class="list">
+                <li>More Types Of Entertainment</li>
+                <li>Extrodinary Delicious Food</li>
+                <li>Awesome Music</li>
+                <li>Chance To Make Friends</li>
+            </ul>
+            <h3></h3>
+        </div>
+    </section>
+
+    <section id="they-said" class="py-1">
+        <div class="container">
+            <h2 class="m-heading text-center">
+                <span class="text-primary">They</span>
+                Said
+            </h2>
+            <div class="items py-1">
+                <!-- have something to update -->
+                <div><img src="./images/people1.jpg" alt="They Said"></div>
+                <div><img src="./images/people2.jpg" alt="They Said"></div>
+                <div><img src="./images/people3.jpg" alt="They Said"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact">
+        <!-- the section will be the flex -->
+        <div class="contact-form bg-primary p-2">
+            <h2 class="m-heading">Contact Us</h2>
+            <p>Please use the form below to contact us.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone" placeholder="Enter Phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea type="text" name="message" id="message" placeholder="Enter Message"></textarea>
+                </div>
+                <input type="submit" value="Send" class="btn btn-dark">
+            </form>
+        </div>
+        <div class="map"></div>
+
+    </section>
+
+    <footer id="main-footer" class="bg-dark text-center py-1">
+        <div class="container">
+            <p>Copyright &copy; 2020, Dance Bar, All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JQuery CDN -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+    <!-- Local JS File -->
+    <!-- local js file must under cdn -->
+    <script src="./js/main.js"></script>
+
+    <!-- js google map api -->
+    <script src="js/main.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8QroyRyCyjCYK0t25E87StO2vxYyu5pQ&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+
+
+
+</body>
+
+</html>
+
+<!-- AIzaSyC8QroyRyCyjCYK0t25E87StO2vxYyu5pQ 
+
+    contact google map:
+
+    google cloud console
+    api service
+    google map
+    credentical
+    api key
+
+    script...api key
+    script src
+-->

@@ -1,0 +1,182 @@
+:root {
+  --primary-color:rgb(133, 133, 65);
+  --secondary-color:rgb(156, 150, 78);
+  /* 425b84
+     5b7bb4
+     burlywood
+     rgb(244, 198, 161) */
+  --max-width:1100px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font: normal 1rem/1.5 'Arial', sans-serif;
+  background: var(--primary-color);
+  /* there is not going to be any scroll bars,
+    also it's going to include all the content */
+  /* not going to be horizental scoll bars, so set overflow-  to be hidden */
+  overflow-x: hidden; 
+  padding-bottom: 50px;
+}
+
+#main-header {
+  background-color: var(--secondary-color);
+  padding: 4rem;
+}
+.container {
+  max-width: var(--max-width);
+  /* push it to the middle */
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+
+/* Time Line Style */
+#timeline ul {
+  background-color: var(--primary-color);
+  padding: 50px 0;
+}
+
+/* Create line */
+#timeline ul li {
+  list-style: none;
+  position: relative;
+  /* li is basically just a line
+     and the content is the <div>(contains h3 and p */
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background-color: white;
+}
+
+/* Boxes */
+#timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 1rem;
+  background-color:var(--secondary-color);
+  transition: all 0.5s ease-in-out;
+
+  /* work with js, we need to add ... */
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Right Side */
+#timeline ul li:nth-child(odd) div {
+  /* make sure we are targeting at the div, not the li(the middle line) */
+  left: 40px;
+  transform: translate(200px, 0);
+}
+
+/* Left Side */
+#timeline ul li:nth-child(even) div {
+  /* make sure we are targeting at the div, not the li(the middle line) */
+  left: -440px;
+  /* work with js */
+  transform: translate(-200px, 0);
+}
+
+/* Dots */
+#timeline ul li::after{
+  content: '';
+  /* after and before ogten need to be set to "absolute" */
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 25px;
+  width: 25px;
+  /* now can not see that, basically because there is no background  */
+  background-color: inherit;
+  /* based on the  */
+  transform: translateX(-50%);
+  border-radius: 50%;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Arrow Base */
+#timeline div::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+
+  /* create a point:
+         use border width and border color */
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+
+/* 🤦‍♀️🤦‍♀️🤦‍♀️ */
+/* Right Side Arrow */
+#timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent  var(--secondary-color);
+}
+
+/* Left Side Arrow */
+#timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent  var(--secondary-color);
+}
+
+/* Show Boxes : work with js */
+/* if the div is in the viewport, then the class"show" will be added on the div */
+#timeline ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+} 
+
+#timeline ul li.show::after {
+  background-color: var(--secondary-color);
+}
+
+@media(max-width: 900px){
+  #timeline ul li div {
+    width: 250px;
+  }
+
+
+  #timeline ul li:nth-child(even) div {
+    left: -285px;
+  } 
+}
+
+@media(max-width: 600px){
+  #timeline ul li {
+    margin-left: 25px;
+  }
+
+  #timeline ul li div {
+    /* - must after a blank */
+    width: calc(100vw - 100px); 
+  }
+  #timeline ul li:nth-child(even) div {
+    left: 40px;
+  }
+
+  #timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent  var(--secondary-color);
+  }
+}
+
+
+
